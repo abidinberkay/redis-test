@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  redis_cache:
+    container_name: berkay_redis_cache
+    image: redis
+    command: redis-server --requirepass berkayPass3008
+    environment:
+      - REDIS_PASSWORD=berkayPass3008
+    ports:
+      - "6379:6379"
+
